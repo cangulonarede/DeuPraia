@@ -1,0 +1,509 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/widget_panel">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/waves_logo"
+            android:contentDescription="Ondas do mar" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Natal · RN"
+                android:textColor="#F6F8FC"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TÁBUA DE MARÉS"
+                android:textColor="#91A4BE"
+                android:textSize="9sp"
+                android:letterSpacing="0.08" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end|center_vertical">
+            <TextView
+                android:id="@+id/refresh"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="⟳"
+                android:textSize="25sp"
+                android:textColor="#D9E5F5"
+                android:contentDescription="Atualizar marés" />
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Atualizando…"
+                android:textColor="#91A0B5"
+                android:textSize="7sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingEnd="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/day_header_bg"
+                android:paddingStart="8dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hoje"
+                    android:textColor="#F4F7FC"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/today_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="11/10 (dom)"
+                    android:textColor="#B7C6DA"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <LinearLayout
+                    android:id="@+id/today_row_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:id="@+id/today_icon_1"
+                        android:layout_width="16dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/tide_high"
+                        android:contentDescription="Tipo de maré" />
+                    <TextView
+                        android:id="@+id/today_time_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="4dp"
+                        android:text="--:--"
+                        android:textColor="#F5F7FC"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:includeFontPadding="false" />
+                    <TextView
+                        android:id="@+id/today_badge_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="52dp"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/pill_high"
+                        android:text="ALTA"
+                        android:textColor="#76B5FF"
+                        android:textStyle="bold"
+                        android:textSize="6sp"
+                        android:singleLine="true" />
+                </LinearLayout>
+<LinearLayout
+                    android:id="@+id/today_row_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:id="@+id/today_icon_2"
+                        android:layout_width="16dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/tide_low"
+                        android:contentDescription="Tipo de maré" />
+                    <TextView
+                        android:id="@+id/today_time_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="4dp"
+                        android:text="--:--"
+                        android:textColor="#F5F7FC"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:includeFontPadding="false" />
+                    <TextView
+                        android:id="@+id/today_badge_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="52dp"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/pill_low"
+                        android:text="ALTA"
+                        android:textColor="#76B5FF"
+                        android:textStyle="bold"
+                        android:textSize="6sp"
+                        android:singleLine="true" />
+                </LinearLayout>
+<LinearLayout
+                    android:id="@+id/today_row_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:id="@+id/today_icon_3"
+                        android:layout_width="16dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/tide_high"
+                        android:contentDescription="Tipo de maré" />
+                    <TextView
+                        android:id="@+id/today_time_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="4dp"
+                        android:text="--:--"
+                        android:textColor="#F5F7FC"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:includeFontPadding="false" />
+                    <TextView
+                        android:id="@+id/today_badge_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="52dp"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/pill_high"
+                        android:text="ALTA"
+                        android:textColor="#76B5FF"
+                        android:textStyle="bold"
+                        android:textSize="6sp"
+                        android:singleLine="true" />
+                </LinearLayout>
+<LinearLayout
+                    android:id="@+id/today_row_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:id="@+id/today_icon_4"
+                        android:layout_width="16dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/tide_low"
+                        android:contentDescription="Tipo de maré" />
+                    <TextView
+                        android:id="@+id/today_time_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="4dp"
+                        android:text="--:--"
+                        android:textColor="#F5F7FC"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:includeFontPadding="false" />
+                    <TextView
+                        android:id="@+id/today_badge_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="52dp"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/pill_low"
+                        android:text="ALTA"
+                        android:textColor="#76B5FF"
+                        android:textStyle="bold"
+                        android:textSize="6sp"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#263D526B"
+            android:text=" " />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/day_header_bg"
+                android:paddingStart="8dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Amanhã"
+                    android:textColor="#F4F7FC"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tomorrow_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="12/10 (seg)"
+                    android:textColor="#B7C6DA"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <LinearLayout
+                    android:id="@+id/tomorrow_row_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:id="@+id/tomorrow_icon_1"
+                        android:layout_width="16dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/tide_high"
+                        android:contentDescription="Tipo de maré" />
+                    <TextView
+                        android:id="@+id/tomorrow_time_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="4dp"
+                        android:text="--:--"
+                        android:textColor="#F5F7FC"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:includeFontPadding="false" />
+                    <TextView
+                        android:id="@+id/tomorrow_badge_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="52dp"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/pill_high"
+                        android:text="ALTA"
+                        android:textColor="#76B5FF"
+                        android:textStyle="bold"
+                        android:textSize="6sp"
+                        android:singleLine="true" />
+                </LinearLayout>
+<LinearLayout
+                    android:id="@+id/tomorrow_row_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:id="@+id/tomorrow_icon_2"
+                        android:layout_width="16dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/tide_low"
+                        android:contentDescription="Tipo de maré" />
+                    <TextView
+                        android:id="@+id/tomorrow_time_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="4dp"
+                        android:text="--:--"
+                        android:textColor="#F5F7FC"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:includeFontPadding="false" />
+                    <TextView
+                        android:id="@+id/tomorrow_badge_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="52dp"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/pill_low"
+                        android:text="ALTA"
+                        android:textColor="#76B5FF"
+                        android:textStyle="bold"
+                        android:textSize="6sp"
+                        android:singleLine="true" />
+                </LinearLayout>
+<LinearLayout
+                    android:id="@+id/tomorrow_row_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:id="@+id/tomorrow_icon_3"
+                        android:layout_width="16dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/tide_high"
+                        android:contentDescription="Tipo de maré" />
+                    <TextView
+                        android:id="@+id/tomorrow_time_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="4dp"
+                        android:text="--:--"
+                        android:textColor="#F5F7FC"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:includeFontPadding="false" />
+                    <TextView
+                        android:id="@+id/tomorrow_badge_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="52dp"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/pill_high"
+                        android:text="ALTA"
+                        android:textColor="#76B5FF"
+                        android:textStyle="bold"
+                        android:textSize="6sp"
+                        android:singleLine="true" />
+                </LinearLayout>
+<LinearLayout
+                    android:id="@+id/tomorrow_row_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:id="@+id/tomorrow_icon_4"
+                        android:layout_width="16dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/tide_low"
+                        android:contentDescription="Tipo de maré" />
+                    <TextView
+                        android:id="@+id/tomorrow_time_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="4dp"
+                        android:text="--:--"
+                        android:textColor="#F5F7FC"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:includeFontPadding="false" />
+                    <TextView
+                        android:id="@+id/tomorrow_badge_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="52dp"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/pill_low"
+                        android:text="ALTA"
+                        android:textColor="#76B5FF"
+                        android:textStyle="bold"
+                        android:textSize="6sp"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
